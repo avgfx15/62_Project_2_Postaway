@@ -24,13 +24,19 @@ server.get("/test-custom-error", (req, res) => {
 
 //? Defaule Route Definition
 server.get('/', (req, res) => {
-    throw new customErrorHandler(200, 'Postaway Application Home Page')
-    // res.send('Postaway Application Home Page')
+    // throw new customErrorHandler(200, 'Postaway Application Home Page')
+    return res.send('Postaway Application Home Page');
 });
 
 //? Error Handler and Logger Middleware setup
 
 server.use(errorHandlerMiddleware);
+
+// ? Page Not Found Or Invalid url request
+
+server.use((req, res) => {
+    return res.status(400).send('Page not found or invalid url request, for more details please visit - http://localhost:3700/apidoc')
+})
 
 // ? Listern Route Definition
 

@@ -11,7 +11,6 @@ export class customErrorHandler extends Error {
 // $ Create ErrorMiddleware Function
 
 export const errorHandlerMiddleware = (err, req, res, next) => {
-    console.log('Logger Function call');
 
     // ? Logger setup to print logs in log file
 
