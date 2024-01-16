@@ -1,0 +1,38 @@
+{
+  "name": "postaway_application",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Postaway Application to Create, Read, Update and Delete Post With additional features likes comments nad like - dislike to individual post after authentication.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avgfx15/Postaway.git"
+  },
+  "keywords": [
+    "Post",
+    "Social",
+    "media",
+    "app",
+    "Social",
+    "account",
+    "Social",
+    "chat",
+    "Blog"
+  ],
+  "author": "Stacodev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avgfx15/Postaway/issues"
+  },
+  "homepage": "https://github.com/avgfx15/Postaway#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "swagger-ui-express": "^5.0.0",
+    "winston": "^3.11.0"
+  }
+}
