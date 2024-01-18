@@ -8,7 +8,7 @@ export default class UserModel {
 
     // + Signup User Model
     static signUpUserModel(name, email, password) {
-        console.log('Model function call');
+
         const newUserModel = new UserModel(name, email, password);
         newUserModel.id = users.length + 1;
         users.push(newUserModel);
