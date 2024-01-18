@@ -2,25 +2,26 @@ import express from 'express';
 import swagger from 'swagger-ui-express';
 import swaggerjson from './swagger.json' assert {type: 'json'};
 import { customErrorHandler, errorHandlerMiddleware } from './src/errorHandler/errorHandler.js';
+import userRouter from './src/features/users/userRoutes/userRoutes.js';
 
 const server = express();
 
 const port = 3700;
 
+//// Middleware to received JSON request
+
+server.use(express.json());
+server.use(express.urlencoded({ extended: false }));
+
 //? Swagger Middleware For API Doc Route
 
 server.use('/apidoc', swagger.serve, swagger.setup(swaggerjson))
 
+//// User Related Routes
+server.use('/api', userRouter)
 
 
 
-
-server.get("/test-custom-error", (req, res) => {
-    throw new customErrorHandler(
-        505,
-        "testing app level custom error handling middleware"
-    );
-});
 
 //? Defaule Route Definition
 server.get('/', (req, res) => {
