@@ -19,7 +19,7 @@
             }
         }
     },
-    "_comment1": "Test Route",
+    "TestRoute": "Test Route",
     "paths": {
         "/": {
             "get": {
@@ -43,7 +43,7 @@
                 }
             }
         },
-        "_comment2": "This is for User Login Path",
+        "SignInRoute": "This is for User Login Path",
         "/api/users/signin": {
             "post": {
                 "tags": [
@@ -74,6 +74,24 @@
                     },
                     "400": {
                         "description": "Incorrect Credentials"
+                    }
+                }
+            }
+        },
+        "PageNotFound": "This is for User Login Path",
+        "/*": {
+            "get": {
+                "tags": [
+                    "404"
+                ],
+                "summary": "Page Not Found",
+                "description": "Invalid url request",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Page Not Found. invalid url, for more visit -  http://localhost:3700/apidoc"
                     }
                 }
             }
