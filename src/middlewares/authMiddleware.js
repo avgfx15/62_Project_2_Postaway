@@ -3,6 +3,7 @@ import { customErrorHandler } from '../errorHandler/errorHandler.js';
 
 const jwtAuthentication = (req, res, next) => {
     const token = req.headers['authorization'];
+
     if (!token) {
         throw new customErrorHandler(404, 'User Unauthorized');
     }

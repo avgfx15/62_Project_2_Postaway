@@ -1,3 +1,5 @@
+import { customErrorHandler } from "../../../errorHandler/errorHandler.js";
+
 export default class PostModel {
     constructor(caption, imageUrl, userId, id) {
         // this.title = title;
@@ -13,6 +15,29 @@ export default class PostModel {
         return posts;
     }
 
+    // @ GET Post By Id
+    static getPostByIdModel(id) {
+
+        const postExists = posts.find((post) => post.id === id);
+        if (!postExists) {
+            throw new customErrorHandler(400, 'Post not found');
+        } else {
+            return postExists;
+        }
+    }
+    // @ GET Posts Created By User By userId
+    static getPostsCreatedByUserByUserIdModel(userId) {
+
+        const getPostsByUser = posts.filter((post) => {
+            return post.userId === userId;
+        });
+        console.log(getPostsByUser);
+        if (!getPostsByUser) {
+            throw new customErrorHandler(400, 'User have not posted any post');
+        } else {
+            return getPostsByUser;
+        }
+    }
 
 }
 

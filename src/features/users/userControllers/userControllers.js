@@ -10,7 +10,7 @@ export default class UserControllers {
 
         try {
             const newUser = UserModel.signUpUserModel(name, email, password);
-            return res.status(200).json({ Status: "Success", user: newUser })
+            return res.status(201).json({ Status: "Success", user: newUser })
         } catch (error) {
             throw new customErrorHandler(401, error.message);
         }
