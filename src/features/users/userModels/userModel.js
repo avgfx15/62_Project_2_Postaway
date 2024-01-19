@@ -13,6 +13,16 @@ export default class UserModel {
         return users;
     }
 
+    // @ GET User By Id
+    static getUserByIdModel(id) {
+        const checkUserExist = this.getAllUsersModel().find((user) => user.id === id);
+        if (!checkUserExist) {
+            throw new customErrorHandler(400, 'User not found');
+        } else {
+            return checkUserExist;
+        }
+    }
+
     // + Signup User Model
     static signUpUserModel(name, email, password) {
 
@@ -25,7 +35,6 @@ export default class UserModel {
     // + SignIn User Model 
     static signInUserModel(email, password) {
         const userMatch = this.getAllUsersModel().find((user) => user.email === email && user.password === password);
-        console.log(userMatch);
         if (!userMatch) {
             throw new customErrorHandler(400, 'Invalid credentials');
         } else {

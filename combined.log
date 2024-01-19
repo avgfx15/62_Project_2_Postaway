@@ -20,3 +20,15 @@
 {"level":"error","message":"timestemp : Fri Jan 19 2024 09:25:51 GMT+0530 (India Standard Time), requestUrl : /api/signup, statusCode : 500, message : Server error: Success is not defined","service":"request-logging"}
 {"level":"info","message":"timestemp : Fri Jan 19 2024 09:26:31 GMT+0530 (India Standard Time), requestUrl : /api/signin, statusCode : 500, message : Server error: Invalid credentials","service":"request-logging"}
 {"level":"error","message":"timestemp : Fri Jan 19 2024 09:26:31 GMT+0530 (India Standard Time), requestUrl : /api/signin, statusCode : 500, message : Server error: Invalid credentials","service":"request-logging"}
+{"level":"info","message":"timestemp : Fri Jan 19 2024 09:38:02 GMT+0530 (India Standard Time), requestUrl : /api/user/1, statusCode : 500, message : Server error: User not found","service":"request-logging"}
+{"level":"error","message":"timestemp : Fri Jan 19 2024 09:38:02 GMT+0530 (India Standard Time), requestUrl : /api/user/1, statusCode : 500, message : Server error: User not found","service":"request-logging"}
+{"level":"info","message":"timestemp : Fri Jan 19 2024 09:38:20 GMT+0530 (India Standard Time), requestUrl : /api/user/1, statusCode : 500, message : Server error: User not found","service":"request-logging"}
+{"level":"error","message":"timestemp : Fri Jan 19 2024 09:38:20 GMT+0530 (India Standard Time), requestUrl : /api/user/1, statusCode : 500, message : Server error: User not found","service":"request-logging"}
+{"level":"info","message":"timestemp : Fri Jan 19 2024 09:54:30 GMT+0530 (India Standard Time), requestUrl : /api/user/11, statusCode : 500, message : Server error: User not found","service":"request-logging"}
+{"level":"error","message":"timestemp : Fri Jan 19 2024 09:54:30 GMT+0530 (India Standard Time), requestUrl : /api/user/11, statusCode : 500, message : Server error: User not found","service":"request-logging"}
+{"level":"info","message":"timestemp : Fri Jan 19 2024 09:54:48 GMT+0530 (India Standard Time), requestUrl : /api/user/11, statusCode : 401, message : User not found","service":"request-logging"}
+{"level":"error","message":"timestemp : Fri Jan 19 2024 09:54:48 GMT+0530 (India Standard Time), requestUrl : /api/user/11, statusCode : 401, message : User not found","service":"request-logging"}
+{"level":"info","message":"timestemp : Fri Jan 19 2024 09:55:26 GMT+0530 (India Standard Time), requestUrl : /api/signin, statusCode : 401, message : Invalid credentials","service":"request-logging"}
+{"level":"error","message":"timestemp : Fri Jan 19 2024 09:55:26 GMT+0530 (India Standard Time), requestUrl : /api/signin, statusCode : 401, message : Invalid credentials","service":"request-logging"}
+{"level":"info","message":"timestemp : Fri Jan 19 2024 09:55:34 GMT+0530 (India Standard Time), requestUrl : /api/signin, statusCode : 401, message : Invalid credentials","service":"request-logging"}
+{"level":"error","message":"timestemp : Fri Jan 19 2024 09:55:34 GMT+0530 (India Standard Time), requestUrl : /api/signin, statusCode : 401, message : Invalid credentials","service":"request-logging"}

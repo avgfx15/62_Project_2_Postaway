@@ -11,6 +11,8 @@ import { signUpFormValidator } from '../../../middlewares/expressValidators.js';
 userRouter.post('/signup', signUpFormValidator, userControllers.userSignUpController);
 // + SignUp Route
 userRouter.post('/signin', userControllers.userSIgnInController);
+// @ GET User By Id 
+userRouter.get('/user/:id', userControllers.getUserByIdController);
 
 
 
