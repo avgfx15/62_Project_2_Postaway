@@ -35,4 +35,23 @@ export default class PosrControllers {
             throw new customErrorHandler(400, error.message);
         }
     }
+
+    // + Create New Post
+    createNewPostControllers = (req, res) => {
+
+        const userId = Number(req.user.userId);
+
+        const { caption } = req.body;
+        const newPost = {
+            caption: caption,
+            userId: userId,
+            imageUrl: req.file.filename,
+        }
+        try {
+            const allPosts = PostModel.createNewPostModel(newPost);
+            return res.status(200).json({ Status: "Success", posts: allPosts });
+        } catch (error) {
+            throw new customErrorHandler(400, error.message);
+        }
+    }
 }

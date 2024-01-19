@@ -4,6 +4,7 @@ const postRouter = express.Router();
 import PostControllers from '../postControllers/postControllers.js';
 const postControllers = new PostControllers();
 import jwtAuthentication from '../../../middlewares/authMiddleware.js';
+import upload from '../../../middlewares/fileUploadMiddleware.js';
 
 // @ GET Posts Posted By User By UserId
 postRouter.get('/postsbyuser', jwtAuthentication, postControllers.getPostsByUserByUserIdControllers);
@@ -11,6 +12,8 @@ postRouter.get('/postsbyuser', jwtAuthentication, postControllers.getPostsByUser
 postRouter.get('/', postControllers.gettAllPostsControllers);
 // @ GET Post By Id
 postRouter.get('/:id', postControllers.getPostByIdControllers);
+// + POST Create New Post
+postRouter.post('/newpost', jwtAuthentication, upload.single('imageUrl'), postControllers.createNewPostControllers);
 
 
 

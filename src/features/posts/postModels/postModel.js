@@ -7,7 +7,7 @@ export default class PostModel {
         this.caption = caption;
         this.imageUrl = imageUrl;
         this.userId = userId;
-        this.id = id;
+        this.id = posts.length + 1;
     }
 
     // @ GET All Post
@@ -37,6 +37,13 @@ export default class PostModel {
         } else {
             return getPostsByUser;
         }
+    }
+
+    // + Create New Post
+    static createNewPostModel(postObj) {
+
+        postObj.id = posts.length + 1;
+        return posts;
     }
 
 }
