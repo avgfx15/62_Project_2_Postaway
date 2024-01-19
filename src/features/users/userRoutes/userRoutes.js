@@ -5,6 +5,7 @@ const userControllers = new UserControllers();
 const userRouter = express.Router();
 
 import { signUpFormValidator } from '../../../middlewares/expressValidators.js';
+import jwtAuthentication from '../../../middlewares/authMiddleware.js';
 
 
 // + SignUp Route

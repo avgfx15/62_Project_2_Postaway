@@ -15,3 +15,5 @@
 {"level":"error","message":"timestemp : Fri Jan 19 2024 09:54:48 GMT+0530 (India Standard Time), requestUrl : /api/user/11, statusCode : 401, message : User not found","service":"request-logging"}
 {"level":"error","message":"timestemp : Fri Jan 19 2024 09:55:26 GMT+0530 (India Standard Time), requestUrl : /api/signin, statusCode : 401, message : Invalid credentials","service":"request-logging"}
 {"level":"error","message":"timestemp : Fri Jan 19 2024 09:55:34 GMT+0530 (India Standard Time), requestUrl : /api/signin, statusCode : 401, message : Invalid credentials","service":"request-logging"}
+{"level":"error","message":"timestemp : Fri Jan 19 2024 10:14:12 GMT+0530 (India Standard Time), requestUrl : /api/user/11, statusCode : 404, message : User Unauthorized","service":"request-logging"}
+{"level":"error","message":"timestemp : Fri Jan 19 2024 10:14:38 GMT+0530 (India Standard Time), requestUrl : /api/user/11, statusCode : 401, message : User not found","service":"request-logging"}

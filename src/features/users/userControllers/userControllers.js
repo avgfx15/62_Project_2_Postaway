@@ -1,3 +1,4 @@
+import jwt from 'jsonwebtoken';
 import { customErrorHandler } from "../../../errorHandler/errorHandler.js";
 import UserModel from "../userModels/userModel.js";
 
@@ -21,7 +22,18 @@ export default class UserControllers {
         const { email, password } = req.body;
         try {
             const checkUserValid = UserModel.signInUserModel(email, password);
-            return res.status(200).json({ Status: "Success", user: checkUserValid });
+            // # JWT Token setup
+            const secretKey = 'mahantswamimaharajismyguru';
+            const token = jwt.sign({ userId: checkUserValid.id, email: checkUserValid.email }, secretKey, { expiresIn: '1h' });
+            // # Store token in cookies
+            res.cookie('jwtToken', token, {
+                secure: true, //$ Set to true if using HTTPS
+                httpOnly: true,
+                sameSite: 'strict', // $ Adjust to your requirements
+                maxAge: 7 * 24 * 60 * 60 * 1000, //$ Set the expiration time (7 days in this example)
+            });
+
+            return res.status(200).json({ Status: "Success", user: checkUserValid, jwtToken: token });
         } catch (error) {
             throw new customErrorHandler(401, error.message);
         }
