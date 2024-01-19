@@ -39,6 +39,16 @@ export default class UserControllers {
         }
     }
 
+    // @ GET All Users
+    getAllUsersController = (req, res) => {
+        try {
+            const allUsers = UserModel.getAllUsersModel();
+            return res.status(200).json({ Status: "Success", users: allUsers })
+        } catch (error) {
+            throw new customErrorHandler(401, error.message);
+        }
+    }
+
     // @ GET User By Id 
     getUserByIdController = (req, res) => {
         const id = Number(req.params.id);

@@ -12,8 +12,10 @@ import jwtAuthentication from '../../../middlewares/authMiddleware.js';
 userRouter.post('/signup', signUpFormValidator, userControllers.userSignUpController);
 // + SignUp Route
 userRouter.post('/signin', userControllers.userSIgnInController);
+// @ GET All Users
+userRouter.get('/users', userControllers.getAllUsersController);
 // @ GET User By Id 
-userRouter.get('/user/:id', userControllers.getUserByIdController);
+userRouter.get('/users/:id', userControllers.getUserByIdController);
 
 
 
