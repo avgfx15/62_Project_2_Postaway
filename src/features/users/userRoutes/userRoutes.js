@@ -7,8 +7,10 @@ const userRouter = express.Router();
 import { signUpFormValidator } from '../../../middlewares/expressValidators.js';
 
 
-
+// + SignUp Route
 userRouter.post('/signup', signUpFormValidator, userControllers.userSignUpController);
+// + SignUp Route
+userRouter.post('/signin', userControllers.userSIgnInController);
 
 
 

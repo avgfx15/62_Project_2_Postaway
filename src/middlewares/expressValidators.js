@@ -2,7 +2,7 @@ import { body, validationResult } from 'express-validator';
 import { customErrorHandler } from '../errorHandler/errorHandler.js';
 import UserModel from '../features/users/userModels/userModel.js';
 
-
+// $ SignUp Form Validation
 export const signUpFormValidator = async (req, res, next) => {
     const rules = [
         body('name').notEmpty().withMessage('Name is requires'),

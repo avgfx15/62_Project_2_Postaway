@@ -1,3 +1,5 @@
+import { customErrorHandler } from "../../../errorHandler/errorHandler.js";
+
 export default class UserModel {
     constructor(name, email, password, id) {
         this.name = name;
@@ -18,6 +20,17 @@ export default class UserModel {
         newUserModel.id = users.length + 1;
         users.push(newUserModel);
         return newUserModel;
+    }
+
+    // + SignIn User Model 
+    static signInUserModel(email, password) {
+        const userMatch = this.getAllUsersModel().find((user) => user.email === email && user.password === password);
+        console.log(userMatch);
+        if (!userMatch) {
+            throw new customErrorHandler(400, 'Invalid credentials');
+        } else {
+            return userMatch;
+        }
     }
 }
 
