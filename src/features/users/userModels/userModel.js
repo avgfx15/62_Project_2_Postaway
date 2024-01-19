@@ -6,6 +6,11 @@ export default class UserModel {
         this.id = id;
     }
 
+    // @ GET All users
+    static getAllUsersModel() {
+        return users;
+    }
+
     // + Signup User Model
     static signUpUserModel(name, email, password) {
 
