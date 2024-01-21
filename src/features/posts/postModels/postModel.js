@@ -69,8 +69,8 @@ export default class PostModel {
             posts.splice(postExistsIndex, 1);
             return postExist;
         }
-
     }
+
 
 }
 

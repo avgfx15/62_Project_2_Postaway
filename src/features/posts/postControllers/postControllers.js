@@ -86,4 +86,5 @@ export default class PosrControllers {
             throw new customErrorHandler(400, error.message);
         }
     }
+
 }

@@ -19,6 +19,10 @@ postRouter.put('/:id', jwtAuthentication, upload.single('imageUrl'), postControl
 //* UPDATE Post By Post Owner
 postRouter.delete('/:id', jwtAuthentication, postControllers.deletePostByOwnerController);
 
+// ? All Comments Routes
+
+
+
 
 
 

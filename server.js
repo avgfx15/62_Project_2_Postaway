@@ -4,6 +4,7 @@ import swaggerjson from './swagger.json' assert {type: 'json'};
 import { customErrorHandler, errorHandlerMiddleware } from './src/errorHandler/errorHandler.js';
 import userRouter from './src/features/users/userRoutes/userRoutes.js';
 import postRouter from './src/features/posts/postRoutes/postRoutes.js';
+import commentRouter from './src/features/comments/commentRoutes/commentRoutes.js';
 
 const server = express();
 
@@ -23,6 +24,9 @@ server.use('/api', userRouter)
 
 //// Post Related Routes
 server.use('/api/posts', postRouter)
+
+//// Comment Related Routes
+server.use('/api/comments', commentRouter);
 
 
 
