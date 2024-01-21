@@ -54,4 +54,25 @@ export default class PosrControllers {
             throw new customErrorHandler(400, error.message);
         }
     }
+
+    // *  UPDATE Post By Id By Post By User
+    updatePostByPostOwnerUserController = (req, res) => {
+        const userId = Number(req.user.userId);
+        const { caption } = req.body;
+        const postId = Number(req.params.id);
+
+        const updatePost = {
+            caption: caption,
+            imageUrl: req.file.filename,
+            userId: userId,
+            id: postId
+        }
+        try {
+            const postUpdate = PostModel.updatePostByPostOwnerModel(userId, postId, updatePost);
+            return res.status(201).json({ Status: "Success", updatePost: postUpdate })
+        } catch (error) {
+            throw new customErrorHandler(400, error.message);
+        }
+
+    }
 }

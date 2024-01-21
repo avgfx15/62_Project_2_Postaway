@@ -46,6 +46,16 @@ export default class PostModel {
         return posts;
     }
 
+    // * UPDATE Post By Owner 
+    static updatePostByPostOwnerModel(userId, postId, postObj) {
+        const postExistsIndex = posts.findIndex((post) => post.userId === userId && post.id === postId);
+        if (!postExistsIndex) {
+            throw new customErrorHandler(400, 'You are not allowed to update');
+        }
+        posts[postExistsIndex] = postObj;
+        return posts[postExistsIndex];
+    }
+
 }
 
 const posts = [

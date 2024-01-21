@@ -14,6 +14,8 @@ postRouter.get('/', postControllers.gettAllPostsControllers);
 postRouter.get('/:id', postControllers.getPostByIdControllers);
 // + POST Create New Post
 postRouter.post('/newpost', jwtAuthentication, upload.single('imageUrl'), postControllers.createNewPostControllers);
+//* UPDATE Post By Post Owner
+postRouter.put('/:id', jwtAuthentication, upload.single('imageUrl'), postControllers.updatePostByPostOwnerUserController)
 
 
 
