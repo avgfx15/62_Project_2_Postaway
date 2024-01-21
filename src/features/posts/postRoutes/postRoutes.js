@@ -6,7 +6,7 @@ const postControllers = new PostControllers();
 import jwtAuthentication from '../../../middlewares/authMiddleware.js';
 import upload from '../../../middlewares/fileUploadMiddleware.js';
 
-// @ GET Posts Posted By User By UserId
+// @ GET All Posts Posted By User By UserId
 postRouter.get('/postsbyuser', jwtAuthentication, postControllers.getPostsByUserByUserIdControllers);
 // @ GET All POsts
 postRouter.get('/', postControllers.gettAllPostsControllers);
@@ -16,6 +16,8 @@ postRouter.get('/:id', postControllers.getPostByIdControllers);
 postRouter.post('/newpost', jwtAuthentication, upload.single('imageUrl'), postControllers.createNewPostControllers);
 //* UPDATE Post By Post Owner
 postRouter.put('/:id', jwtAuthentication, upload.single('imageUrl'), postControllers.updatePostByPostOwnerUserController)
+//* UPDATE Post By Post Owner
+postRouter.delete('/:id', jwtAuthentication, postControllers.deletePostByOwnerController);
 
 
 

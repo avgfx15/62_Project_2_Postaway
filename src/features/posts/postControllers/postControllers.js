@@ -73,6 +73,17 @@ export default class PosrControllers {
         } catch (error) {
             throw new customErrorHandler(400, error.message);
         }
+    }
 
+    // - DELETE Post By Post Owner
+    deletePostByOwnerController = (req, res) => {
+        const userId = Number(req.user.userId);
+        const postId = Number(req.params.id);
+        try {
+            const deletedPost = PostModel.deletePostByOwnerModel(userId, postId);
+            return res.status(200).json({ Status: "Success", deletedPost: deletedPost });
+        } catch (error) {
+            throw new customErrorHandler(400, error.message);
+        }
     }
 }

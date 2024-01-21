@@ -56,6 +56,22 @@ export default class PostModel {
         return posts[postExistsIndex];
     }
 
+    // - DELETE Post By Post Owner
+    static deletePostByOwnerModel(userId, postId) {
+        const postExist = posts.find((post) => post.userId === userId && post.id === postId);
+        if (!postExist) {
+            throw new customErrorHandler(400, 'Post is not found');
+        } else {
+            const postExistsIndex = posts.findIndex((post) => post.userId === userId && post.id === postId);
+            if (!postExistsIndex) {
+                throw new customErrorHandler(401, 'You are not authorizerd to delete post')
+            }
+            posts.splice(postExistsIndex, 1);
+            return postExist;
+        }
+
+    }
+
 }
 
 const posts = [

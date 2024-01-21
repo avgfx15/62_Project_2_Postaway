@@ -112,3 +112,5 @@
 {"level":"error","message":"timestemp : Sun Jan 21 2024 07:44:30 GMT+0530 (India Standard Time), requestUrl : /api/posts/3, statusCode : 400, message : You are not allowed to update","service":"request-logging"}
 {"level":"info","message":"timestemp : Sun Jan 21 2024 07:49:49 GMT+0530 (India Standard Time), requestUrl : /api/posts/3, statusCode : 400, message : postExists is not defined","service":"request-logging"}
 {"level":"error","message":"timestemp : Sun Jan 21 2024 07:49:49 GMT+0530 (India Standard Time), requestUrl : /api/posts/3, statusCode : 400, message : postExists is not defined","service":"request-logging"}
+{"level":"info","message":"timestemp : Sun Jan 21 2024 08:02:51 GMT+0530 (India Standard Time), requestUrl : /api/posts/3, statusCode : 400, message : Post is not found","service":"request-logging"}
+{"level":"error","message":"timestemp : Sun Jan 21 2024 08:02:51 GMT+0530 (India Standard Time), requestUrl : /api/posts/3, statusCode : 400, message : Post is not found","service":"request-logging"}
