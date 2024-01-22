@@ -266,3 +266,21 @@
 {"level":"error","message":"timestemp : Mon Jan 22 2024 00:23:01 GMT+0530 (India Standard Time), requestUrl : /api/comments/comment/1, statusCode : 400, message : userId is not defined","service":"request-logging"}
 {"level":"info","message":"timestemp : Mon Jan 22 2024 00:24:29 GMT+0530 (India Standard Time), requestUrl : /api/comments/comment/2, statusCode : 400, message : No comment by user","service":"request-logging"}
 {"level":"error","message":"timestemp : Mon Jan 22 2024 00:24:29 GMT+0530 (India Standard Time), requestUrl : /api/comments/comment/2, statusCode : 400, message : No comment by user","service":"request-logging"}
+{"level":"info","message":"timestemp : Mon Jan 22 2024 08:20:00 GMT+0530 (India Standard Time), requestUrl : /api/likes/1, statusCode : 400, message : Post not found","service":"request-logging"}
+{"level":"error","message":"timestemp : Mon Jan 22 2024 08:20:00 GMT+0530 (India Standard Time), requestUrl : /api/likes/1, statusCode : 400, message : Post not found","service":"request-logging"}
+{"level":"info","message":"timestemp : Mon Jan 22 2024 08:20:30 GMT+0530 (India Standard Time), requestUrl : /api/likes/1, statusCode : 400, message : Post not found","service":"request-logging"}
+{"level":"error","message":"timestemp : Mon Jan 22 2024 08:20:30 GMT+0530 (India Standard Time), requestUrl : /api/likes/1, statusCode : 400, message : Post not found","service":"request-logging"}
+{"level":"info","message":"timestemp : Mon Jan 22 2024 08:33:07 GMT+0530 (India Standard Time), requestUrl : /api/likes/3, statusCode : 400, message : postExists is not defined","service":"request-logging"}
+{"level":"error","message":"timestemp : Mon Jan 22 2024 08:33:07 GMT+0530 (India Standard Time), requestUrl : /api/likes/3, statusCode : 400, message : postExists is not defined","service":"request-logging"}
+{"level":"info","message":"timestemp : Mon Jan 22 2024 08:36:28 GMT+0530 (India Standard Time), requestUrl : /api/likes/2, statusCode : 400, message : Post not found","service":"request-logging"}
+{"level":"error","message":"timestemp : Mon Jan 22 2024 08:36:28 GMT+0530 (India Standard Time), requestUrl : /api/likes/2, statusCode : 400, message : Post not found","service":"request-logging"}
+{"level":"info","message":"timestemp : Mon Jan 22 2024 08:36:38 GMT+0530 (India Standard Time), requestUrl : /api/likes/1, statusCode : 400, message : Post not found","service":"request-logging"}
+{"level":"error","message":"timestemp : Mon Jan 22 2024 08:36:38 GMT+0530 (India Standard Time), requestUrl : /api/likes/1, statusCode : 400, message : Post not found","service":"request-logging"}
+{"level":"info","message":"timestemp : Mon Jan 22 2024 08:36:54 GMT+0530 (India Standard Time), requestUrl : /api/likes/2, statusCode : 400, message : Post not found","service":"request-logging"}
+{"level":"error","message":"timestemp : Mon Jan 22 2024 08:36:54 GMT+0530 (India Standard Time), requestUrl : /api/likes/2, statusCode : 400, message : Post not found","service":"request-logging"}
+{"level":"info","message":"timestemp : Mon Jan 22 2024 08:37:46 GMT+0530 (India Standard Time), requestUrl : /api/likes/2, statusCode : 400, message : Post not found","service":"request-logging"}
+{"level":"error","message":"timestemp : Mon Jan 22 2024 08:37:46 GMT+0530 (India Standard Time), requestUrl : /api/likes/2, statusCode : 400, message : Post not found","service":"request-logging"}
+{"level":"info","message":"timestemp : Mon Jan 22 2024 08:39:44 GMT+0530 (India Standard Time), requestUrl : /api/comments/1, statusCode : 400, message : User already comment on this post for correction click on update comment","service":"request-logging"}
+{"level":"error","message":"timestemp : Mon Jan 22 2024 08:39:44 GMT+0530 (India Standard Time), requestUrl : /api/comments/1, statusCode : 400, message : User already comment on this post for correction click on update comment","service":"request-logging"}
+{"level":"info","message":"timestemp : Mon Jan 22 2024 08:53:13 GMT+0530 (India Standard Time), requestUrl : /api/likes/1, statusCode : undefined, message : postID is not defined","service":"request-logging"}
+{"level":"error","message":"timestemp : Mon Jan 22 2024 08:53:13 GMT+0530 (India Standard Time), requestUrl : /api/likes/1, statusCode : undefined, message : postID is not defined","service":"request-logging"}

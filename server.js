@@ -5,6 +5,7 @@ import { customErrorHandler, errorHandlerMiddleware } from './src/errorHandler/e
 import userRouter from './src/features/users/userRoutes/userRoutes.js';
 import postRouter from './src/features/posts/postRoutes/postRoutes.js';
 import commentRouter from './src/features/comments/commentRoutes/commentRoutes.js';
+import likeRouter from './src/features/likes/likesRoute/likesRouter.js';
 
 const server = express();
 
@@ -28,6 +29,8 @@ server.use('/api/posts', postRouter)
 //// Comment Related Routes
 server.use('/api/comments', commentRouter);
 
+//// Likes Related Routes
+server.use('/api/likes', likeRouter)
 
 
 
