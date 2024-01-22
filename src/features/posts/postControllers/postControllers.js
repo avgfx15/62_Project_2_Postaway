@@ -87,4 +87,27 @@ export default class PosrControllers {
         }
     }
 
+    // @ GET Post by Search Filter   
+    getPostBySearchFilterController = (req, res) => {
+        const searchText = req.query.searchText;
+        console.log(searchText);
+        try {
+            const modelResponse = PostModel.getPostBySearchFilterModel(searchText);
+            return res.status(200).json({ Status: "Success", modelResponse: modelResponse });
+        } catch (error) {
+            throw new customErrorHandler(400, error.message);
+        }
+    }
+
+    // @ GET Post Sorted By userId
+    getSortedPostByUserIdController = (req, res) => {
+        try {
+            const sortedPost = PostModel.getSortedPostByUserIdModel();
+            return res.status(200).json({ Status: "Success", sortedPost: sortedPost });
+        } catch (error) {
+            throw new customErrorHandler(400, error.message);
+
+        }
+
+    }
 }

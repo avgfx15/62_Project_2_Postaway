@@ -41,7 +41,7 @@ export default class PostModel {
 
     // + Create New Post
     static createNewPostModel(postObj) {
-
+        posts.push(postObj);
         postObj.id = posts.length + 1;
         return posts;
     }
@@ -71,6 +71,20 @@ export default class PostModel {
         }
     }
 
+    // @ GET Post By Search Filter
+    static getPostBySearchFilterModel(searchText) {
+        const searchResult = posts.filter((post) => post.caption.includes(searchText));
+        return searchResult;
+    }
+
+    // @ GET Sorting Post By userId
+    static getSortedPostByUserIdModel() {
+        const sortQueryResult = posts.sort((a, b) => a.userId > b.userId ? 1 : ((b.userId > a.userId) ? -1 : 0));
+        if (!sortQueryResult) {
+            throw new customErrorHandler(401, 'Something went wrong')
+        }
+        return sortQueryResult;
+    }
 
 }
 
@@ -98,5 +112,11 @@ const posts = [
         imageUrl: 'https://cdn.create.vista.com/downloads/81047bb1-ed6d-478b-b572-c6739c2a06ac_1024.jpeg',
         userId: 3,
         id: 4
+    },
+    {
+        caption: 'Young Brotherhood Products',
+        imageUrl: 'https://cdn.create.vista.com/downloads/8270d38d-0ee2-487c-8e00-902b73bc9f7d_1024.jpeg',
+        userId: 1,
+        id: 5
     },
 ]

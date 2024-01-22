@@ -8,6 +8,10 @@ import upload from '../../../middlewares/fileUploadMiddleware.js';
 
 // @ GET All Posts Posted By User By UserId
 postRouter.get('/postsbyuser', jwtAuthentication, postControllers.getPostsByUserByUserIdControllers);
+// @GET Post By Search Filter
+postRouter.get('/postbysearchfilter', postControllers.getPostBySearchFilterController)
+// @ GET Post BY sorting by User
+postRouter.get('/sorted', postControllers.getSortedPostByUserIdController);
 // @ GET All POsts
 postRouter.get('/', postControllers.gettAllPostsControllers);
 // @ GET Post By Id
